@@ -41,7 +41,7 @@ export default function Categories() {
   ];
 
   const handleScroll = (direction: ScrollDirection) => {
-    const scrollWidth = 250;
+    const scrollWidth = 200;
     const containerWidth = 400;
     if (direction === ScrollDirection.LEFT) {
       setScrollPosition(Math.max(scrollPosition - scrollWidth, 0));
@@ -59,10 +59,10 @@ export default function Categories() {
       )}
       <div className="flex items-center  overflow-hidden">
         <div className="flex transition-all" style={{ transform: `translateX(-${scrollPosition}px)` }}>
-          <div className="flex items-center">
+          <div className="flex items-center space-x-8">
             {categoriesList.map((category, index) => (
-              <div key={index} className="w-32 flex-shrink-0">
-                <div className="flex flex-col items-center cursor-pointer border-b-2 border-[#fff] hover:border-b-2 hover:border-[#484848] pb-2 ">
+              <div key={index} className="w-fit flex-shrink-0">
+                <div className="flex flex-col items-center cursor-pointer px-1 border-b-2 border-[#fff] hover:border-b-2 hover:border-[#484848] pb-2 ">
                   <span className="text-xl">{category.icon}</span>
                   <span className="mt-1 text-sm">{category.name}</span>
                 </div>
