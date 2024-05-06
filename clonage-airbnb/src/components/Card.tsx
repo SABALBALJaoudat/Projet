@@ -12,7 +12,7 @@ interface CardProps {
   images: string[];
 }
 
-const Card: React.FC<CardProps> = ({ city, country, dates, price_per_night, rating, owner, images }) => {
+export default function Card({ city, country, dates, price_per_night, rating, owner, images }: CardProps) {
     return (
       <div className="max-w  overflow-hidden cursor-pointer relative">
         <div className="text-white absolute top-5 right-5 z-50 text-xl"><FaRegHeart/> </div>
@@ -34,7 +34,4 @@ const Card: React.FC<CardProps> = ({ city, country, dates, price_per_night, rati
         </div>
       </div>
     );
-  };
-  
-  
-  export default Card;
+};
