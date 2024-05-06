@@ -9,7 +9,7 @@ interface CardItem {
     price: number;
     rating: number;
     owner: string;
-    image: string[];
+    images: string[];
 }
 
 interface CardListState {
